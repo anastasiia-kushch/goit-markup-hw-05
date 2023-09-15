@@ -536,6 +536,42 @@ address {
   background-color: #31d0aa;
 }
 
+.footer-subscribe-container {
+  margin-left: 80px;
+}
+
+.footer-subscribe-name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.subscribe-form-input {
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  padding-left: 16px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.subscribe-form-input::placeholder {
+  color: #ffffff;
+}
+
 /* BACKDROP */
 .backdrop {
   position: fixed;
@@ -558,6 +594,31 @@ address {
   pointer-events: auto;
 }
 
+.submit-button {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4d5ae5;
+}
+
+.submit-button-icon {
+  margin-left: 16px;
+  fill: #ffffff;
+}
+
 /* MODAL WINDOW */
 .modal {
   position: absolute;
@@ -566,9 +627,12 @@ address {
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 584px;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   border-radius: 4px;
   background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn {
@@ -580,10 +644,13 @@ address {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
   display: flex;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn-icon {
@@ -600,6 +667,7 @@ address {
 .close-btn:hover .close-btn-icon,
 .close-btn:focus .close-btn-icon {
   fill: #ffffff;
+  border: none;
 }
 
 /* MODAL FORM */
@@ -610,12 +678,11 @@ address {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-top: 48px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
-.contactt-form-field-wrapper {
-  margin-top: 8px;
+.contact-form-field-wrapper {
+  margin-bottom: 8px;
 }
 
 .contact-form-field-label {
@@ -637,8 +704,11 @@ address {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
+
 }
 
 .contact-form-field-input:focus {
@@ -649,31 +719,35 @@ address {
 .contact-form-field-icon {
   fill: #2e2f42;
   position: absolute;
-  top: 11px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 16px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.phone-icon,
-.email-icon {
-  top: 8px;
 }
 
 .contact-form-field-input:focus + .contact-form-field-icon {
   fill: #4d5ae5;
 }
 
+.contact-form-comment-wrapper {
+  margin-bottom: 16px;
+}
+
 .contact-form-comment {
   width: 360px;
   height: 120px;
+  font-style: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
   padding: 8px 16px;
   resize: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-comment::placeholder {
@@ -686,25 +760,33 @@ address {
 }
 
 .contact-form-checkbox-wrapper {
-  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
-.contact-form-own-cheeckbox {
+.contact-form-own-checkbox {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 16px;
   height: 16px;
-  border-radius: 4px;
+  fill: transparent;
+  border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-checkbox:checked .contact-form-own-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #F4F4FD;
 }
 
 .contact-form-checkbox-label {
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
 }
 
