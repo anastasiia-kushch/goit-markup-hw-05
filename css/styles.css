@@ -490,12 +490,12 @@ img {
 .subcribe-form {
   display: flex;
   align-items: center;
+  gap: 24px;
 }
 
 .footer-input {
   width: 264px;
   height: 40px;
-  margin-right: 24px;
   padding: 8px 16px;
 
   border-radius: 4px;
@@ -515,8 +515,12 @@ img {
 
 .footer-btn {
   padding: 8px 16px;
+  min-width: 165px;
+  height: 40px;
 
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   border: none;
   border-radius: 4px;
