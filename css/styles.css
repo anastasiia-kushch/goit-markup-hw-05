@@ -499,18 +499,18 @@ img {
   padding: 8px 16px;
 
   border-radius: 4px;
-  border: 1px solid var(--modal-background-cl);
+  border: 1px solid var(--white-background-cl);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
 
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: var(--modal-background-cl);
+  color: var(--white-background-cl);
 }
 
 .footer-input::placeholder {
-  color: var(--modal-background-cl);
+  color: var(--white-background-cl);
 }
 
 .footer-btn {
@@ -526,7 +526,7 @@ img {
   border-radius: 4px;
   background-color: var(--primary-brand-cl);
 
-  color: var(--modal-background-cl);
+  color: var(--white-background-cl);
 
   font-weight: 500;
   line-height: 1.5;
@@ -618,6 +618,7 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  padding: 0;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--accent-cl);
@@ -683,17 +684,16 @@ img {
 
   width: 100%;
   height: 40px;
+  padding-left: 38px;
 
   border-radius: 4px;
   border: 1px solid var(--modal-overlay-cl);
   color: var(--dark-cl);
-
-  padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
 
   transition: var(--trns);
   transition-property: border-color;
-
-  outline: transparent;
 }
 
 .input-field:hover,
@@ -805,7 +805,7 @@ img {
   border: 1px solid var(--checkbox-cl);
 
   cursor: pointer;
-  
+
   transition: var(--trns);
   transition-property: border, background-color, fill;
 }
