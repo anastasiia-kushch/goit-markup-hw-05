@@ -432,7 +432,7 @@
                 <p class="footer-title">Subscribe</p>
                 <form class="subcribe-form">
                     <label class="footer-label" for="email">
-                        <input type="email" class="footer-input" name="email" placeholder="E-mail" required>
+                        <input type="email" id="email" class="footer-input" name="email" placeholder="E-mail" required>
                     </label>
                     <button type="submit" class="footer-btn">Subscribe
                         <svg class="subcribe-icon" width="24" height="24">
@@ -448,7 +448,7 @@
     <!-- #endregion -->
 
     <!-- #region MODAL -->
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay ">
         <div class="modal">
             <button class="close-btn" type="button" aria-label="Modal window close button">
                 <svg class="close-btn-icon" width="8" height="8">
@@ -506,12 +506,12 @@
                         name="user-privacy" required />
                     <label class="privacy-text" for="user-privacy">
                         <span class="modal-form-checkbox">
-                        <svg class="modal-form-checkbox-icon" width="10" height="8">
-                            <use href="./images/icons.svg#icon-agree"></use>
-                        </svg>
-                    </span>
-                    I accept the terms and conditions of the <a
-                            class="privacy-link" href="">Privacy Policy</a></label>
+                            <svg class="modal-form-checkbox-icon" width="10" height="8">
+                                <use href="./images/icons.svg#icon-agree"></use>
+                            </svg>
+                        </span>
+                        I accept the terms and conditions of the <a class="privacy-link" href="">Privacy
+                            Policy</a></label>
 
                 </div>
                 <button class="form-btn" type="submit">Send</button>

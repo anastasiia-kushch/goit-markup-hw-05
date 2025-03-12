@@ -810,19 +810,17 @@ img {
   transition-property: border, background-color, fill;
 }
 
-input[type='checkbox']:checked + .modal-form-checkbox {
+.privacy-checkbox:checked + .privacy-text .modal-form-checkbox {
   border: none;
   background-color: var(--pressed-state-cl);
-  fill: var(--light-cl);
 }
+
 .modal-form-checkbox-icon {
   opacity: 0;
   transition: var(--trns);
   transition-property: opacity;
 }
-input[type='checkbox']:checked
-  + .modal-form-checkbox
-  > .modal-form-checkbox-icon {
+.privacy-checkbox:checked + .privacy-text .modal-form-checkbox-icon {
   opacity: 1;
   fill: var(--light-cl);
 }
